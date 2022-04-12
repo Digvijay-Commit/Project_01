@@ -1,0 +1,55 @@
+<p>reactive-form works!</p>
+<ul *ngFor="let val of ArrImport; index as i">
+  <li>{{ i }} : {{ val.fname }}</li>
+  <li>{{ i }} : {{ val.lname }}</li>
+  <li>{{ i }} : {{ val.age }}</li>
+  <li>{{ i }} : {{ val.Qualification }}</li>
+</ul>
+<ul *ngFor="let data of ALPHAS">
+  <li>data value : {{ data }}</li>
+</ul>
+<table border="2">
+  <tr>
+    <td>Fname</td>
+    <td>Lname</td>
+    <td>age</td>
+    <td>Qualification</td>
+  </tr>
+  <tr *ngFor="let value of ArrImport; index as i">
+    <td>{{ i }}_{{ value.fname }}</td>
+    <td>{{ i }}_{{ value.lname }}</td>
+    <td>{{ i }}_{{ value.age }}</td>
+    <td>{{ i }}_{{ value.Qualification }}</td>
+  </tr>
+</table>
+<hr />
+<input type="text" [(ngModel)]="color" />
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'">Switch Case : Red</div>
+  <div *ngSwitchCase="'yellow'">Switch Case : yellow</div>
+  <div *ngSwitchCase="'blue'">Switch Case : Blue</div>
+  <div *ngSwitchDefault="other"> plz Enter Only RYB</div>
+</div>
+<p></p>
+<hr />
+<input type="number" [(ngModel)]="valNum" />
+<div [ngSwitch]="valNum">
+  <div *ngSwitchCase="1">switch case : One</div>
+  <div *ngSwitchCase="2">switch case : Two</div>
+  <div *ngSwitchCase="3">switch case : Three</div>
+  <div *ngSwitchCase="4">switch case : Four</div>
+  <div *ngSwitchCase="5">switch case : Five</div>
+  <div *ngSwitchDefault="">switch case : Default</div>
+</div>
+<hr />
+<input type="text" [(ngModel)]="nameString" />
+<p>{{ nameString }}</p>
+<hr />
+<button class="btn" (click)="btnClick()">btnClicked</button>
+<div *ngIf="btnPos; then ifBlock; else elseBlock">If else Fun</div>
+<ng-template #ifBlock>
+  <h2>if Exicuted</h2>
+</ng-template>
+<ng-template #elseBlock>
+  <h2>else Exicuted</h2>
+</ng-template>

@@ -1,0 +1,24 @@
+<p>templet-form works!</p>
+<form #contactForm="ngForm" (ngSubmit)="save(this)">
+  <label> fname </label>
+  <input type="text" id="fname" name="fname" #fname="ngModel" ngModel />
+  <br />
+  <label> lname </label>
+  <input type="text" id="lname" name="lname" #lname="ngModel" ngModel />
+  <br />
+  <button type="submit">save</button>
+  <br />
+  <h2>input level :</h2>
+  <p>fname: {{ fname.value }}</p>
+  <p>valid: {{ fname.valid }}</p>
+  <p>invalid: {{ fname.invalid }}</p>
+  <p>touched: {{ fname.touched }}</p>
+  <br />
+  <p>lname: {{ lname.value }}</p>
+  <h2>form level :</h2>
+  <p>{{ contactForm.value | json }}</p>
+  <p>contactForm valid: {{ contactForm.valid }}</p>
+  <p>contactForm invalid: {{ contactForm.invalid }}</p>
+  <p>contactForm touched: {{ contactForm.touched }}</p>
+  <p>contactForm submitted: {{ contactForm.submitted }}</p>
+</form>

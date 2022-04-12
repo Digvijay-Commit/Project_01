@@ -1,0 +1,31 @@
+<h1>my first application</h1>
+<ul>
+  <li><a [routerLink]="['/dv']" routerLinkActive="active">dv</a></li>
+  <li><a [routerLink]="['/child']" routerLinkActive="active">child</a></li>
+  <li><a [routerLink]="['/parent']" routerLinkActive="active">parent</a></li>
+  <li>
+    <a [routerLink]="['/digvijay']" routerLinkActive="active">digvijay</a>
+  </li>
+  <li><a [routerLink]="['/n']" routerLinkActive="active">n</a></li>
+  <li><a [routerLink]="['/kp']" routerLinkActive="active">kp</a></li>
+  <li><a [routerLink]="['/test']" routerLinkActive="active">test</a></li>
+  <li><a [routerLink]="['/binding']" routerLinkActive="active">binding</a></li>
+  <li>
+    <a [routerLink]="['/templetform']" routerLinkActive="active"
+      >templateform</a
+    >
+  </li>
+  <li>
+    <a [routerLink]="['/reactiveform']" routerLinkActive="active"
+      >ReactiveForm</a
+    >
+  </li>
+</ul>
+<hr />
+<button class="btnRed" routerLink="a">load module : a</button>
+<button class="btnGreen" routerLink="b">load module : b</button>
+<hr />
+<h1>content</h1>
+<hr />
+<router-outlet></router-outlet>
+<h1>fotterpage</h1>
